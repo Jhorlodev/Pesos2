@@ -158,17 +158,18 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
 
   return (
     
-    <div className="contenedor text-white font-bold p-3 mt-20 sm:border-2 sm:border-green-100 sm:p-4 sm:w-[97%]  sm:align-middle sm:justify-center sm:flex sm:items-center">
+    <div className="contenedor text-white font-bold p-3 mt-20 mx-auto sm:border-2 sm:border-green-400 sm:p-4 sm:w-[97%]  sm:align-middle sm:mx-auto sm:flex sm:items-center">
     
       
-     <div className="overflow-x-auto    sm:space-y-[900px]   sm:bg-amber-100 sm:h-full ">
+     <div className="overflow-x-auto    sm:space-y-[900px]  sm:bg-[#31304D] sm:h-full ">
        
-       <div className="absolute mt-1 mx-3.5  sm:w-[99%] sm:mx-1.5  sm:w-[60%] sm:mx-44 sm:my-3 sm:bg-blue-300 sm:mt-[255px]">
+       <div className="absolute mt-1 mx-3.5  sm:w-[99%] sm:mx-1.5  sm:w-[59%] sm:mx-44 sm:my-3 sm:bg-blue-300 sm:mt-[250px]">
 
        
       <h1 className="text-3xl font-bold  bg-[#0085ff]   p-3 rounded-xl drop-shadow-2xl">Calculadora de Peso</h1>
        
       <div className="flex flex-col-2 flex-grow   pt-2 pb-1 space-x-3 ">
+       
         
         <label className="text-start font-bold  mr-4 pt-2  text-justify space-x-3.5 md:w-30  ">Largo de la plancha:</label>
         <input
