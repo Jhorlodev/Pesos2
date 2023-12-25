@@ -164,7 +164,7 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
       
      <div className="overflow-x-auto    sm:space-y-[900px] sm:mx-auto  sm:bg-[#31304D] sm:h-full ">
        
-       <div className="absolute mt-1 mx-3.5    sm:w-[800px]  sm:bg-blue-400 sm:mt-[250px]  ">
+       <div className="absolute mt-1 mx-3.5    sm:w-[800px]  sm:bg-blue-400 sm:mt-[250px] md:mx-auto ">
 
        
       <h1 className="text-3xl font-bold  bg-[#0085ff]   p-3 rounded-xl drop-shadow-2xl">Calculadora de Peso</h1>
