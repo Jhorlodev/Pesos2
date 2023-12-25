@@ -141,7 +141,7 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
 
 
 
-
+    
     setError('');
     setLargo('');
     setAncho('');
@@ -155,15 +155,16 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
     setData(newTableData);
   };
     
-
+  
+  
   return (
     
-    <div className="contenedor text-white font-bold p-3 mt-20 mx-auto sm:border-2 sm:border-green-400 sm:p-4 sm:w-[97%]  sm:align-middle sm:mx-auto sm:flex sm:items-center">
+    <div className=" animate-fade-left contenedor text-white font-bold p-3 mt-20 mx-auto  sm:border-2 sm:border-green-400  sm:p-4 sm:w-[97%]  sm:align-middle sm:mx-auto sm:flex sm:items-center">
     
       
-     <div className="overflow-x-auto    sm:space-y-[900px]  sm:bg-[#31304D] sm:h-full ">
+     <div className="overflow-x-auto    sm:space-y-[900px] sm:mx-auto  sm:bg-[#31304D] sm:h-full ">
        
-       <div className="absolute mt-1 mx-3.5  sm:w-[99%] sm:mx-1.5  sm:w-[59%] sm:mx-44 sm:my-3 sm:bg-blue-300 sm:mt-[250px]">
+       <div className="absolute mt-1 mx-3.5    sm:w-[800px]  sm:bg-blue-400 sm:mt-[250px]  ">
 
        
       <h1 className="text-3xl font-bold  bg-[#0085ff]   p-3 rounded-xl drop-shadow-2xl">Calculadora de Peso</h1>
@@ -238,9 +239,11 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
           className="w-40 grow h-8 my-1  border border-slate-300 rounded-md py-0.5 pl-3 pr-2 shadow-sm focus:outline-none border-2  focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm text-[#4A4A4A]"
           />
       </div>
-      <button className="text-3xl font-bold  bg-blue-500 shadow-lg shadow-blue-500/50 drop-shadow-2xl flex justify-center p-2 w-full rounded-xl mt-1.5 mb-8 mt-3 border-green-500" onClick={calcularPeso}>Calcular</button>
+      
+      <button className="text-3xl animate-duration-75 font-bold  bg-blue-500 shadow-lg shadow-blue-500/50 drop-shadow-2xl flex justify-center p-2 w-full rounded-xl mt-1.5 mb-8 mt-3 border-green-500" onClick={calcularPeso}>Calcular</button>
 
      </div>
+     
       
 {error && <p style={{ color: 'red' }}>{error}</p>}
       <table className="scrool-x-auto  border-separate border border-cyan-500 border-spacing-0.5 pt-2 mt-[80vh]  ">
