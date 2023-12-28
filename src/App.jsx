@@ -159,7 +159,7 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
   
   return (
     
-    <div className=" animate-fade-left contenedor text-white font-bold p-3 mt-20 mx-auto  sm:border-2 sm:border  sm:p-4 sm:w-[97%]  sm:align-middle sm:mx-auto sm:flex sm:items-center md:border-none md:mx-auto ">
+    <div className=" animate-fade-left contenedor text-white font-bold p-3 mt-20 mx-auto  sm:border-2 sm:border  sm:p-4 sm:w-[97%]  sm:align-middle sm:mx-auto sm:flex sm:items-center md:border-none lg:mx-auto ">
     
       
      <div className="overflow-x-auto    sm:space-y-[900px] sm:mx-auto  sm:bg-[#31304D] sm:h-full ">
