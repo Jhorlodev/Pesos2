@@ -1,5 +1,5 @@
 import "./App.css"
-import React, { useState, useRef, useEffect } from 'react';
+import  { useState, useRef, useEffect } from 'react';
 import {useLocalStorage} from "./UseLocalStorage";
 
 
@@ -18,7 +18,6 @@ function App() {
   const [sumaPesoUnitario, setSumaPesoUnitario] = useLocalStorage('sumaPesoUnitario',0);
   const [sumaPesoReal, setSumaPesoReal] = useState(0);
   const [sumaPorcentajeMerma, setSumaPorcentajeMerma] = useLocalStorage('sumaPorcentajeMerma ',0);
-  const [kgMerma, setKgMerma] = useLocalStorage('kgMerma',0);
   const [pesoPlanchaInicial, setPesoPlanchaInicial] = useLocalStorage('pesoPlanchaInicial ',0);
   const [sumaKgMerma, setSumaKgMerma] = useLocalStorage('sumaKgMerma',0);
   const [sumaConsumoOf, setSumaConsumoOf] = useLocalStorage('sumaConsumoOf',0);
@@ -46,7 +45,7 @@ function App() {
       sumaKgMerma += parseFloat(row.kgMerma);
       sumaConsumoOf += parseFloat(row.consumoOf);
       
-    });;
+    });
 
   setSumaPesoUnitario(sumaPesoUnitario.toFixed(2));
     setSumaPesoReal(sumaPesoReal.toFixed(2));
@@ -159,17 +158,18 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
   
   return (
     
-    <div className=" animate-fade-left contenedor text-white font-bold p-3 mt-20 mx-auto  sm:border-2 sm:border  sm:p-4 sm:w-[97%]  sm:align-middle sm:mx-auto sm:flex sm:items-center md:border-none lg:mx-auto ">
+    <div className=" animate-fade-left text-white font-bold container mx-auto py-8 pb-5  ">
     
       
-     <div className="overflow-x-auto    sm:space-y-[900px] sm:mx-auto  sm:bg-[#31304D] sm:h-full ">
-       
-       <div className="absolute mt-1 mx-3.5    sm:w-[800px]  sm:bg-blue-400 sm:mt-[250px] md:mx-auto ">
+   
+     
+       <div className="   relative max-w-4xl container mx-auto   ">
 
        
       <h1 className="text-3xl font-bold  bg-[#0085ff]   p-3 rounded-xl drop-shadow-2xl">Calculadora de Peso</h1>
        
       <div className="flex flex-col-2 flex-grow   pt-2 pb-1 space-x-3 ">
+       
        
         
         <label className="text-start font-bold  mr-4 pt-2  text-justify space-x-3.5 md:w-30  ">Largo de la plancha:</label>
@@ -241,13 +241,14 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
       </div>
       
       <button className="text-3xl animate-duration-75 font-bold  bg-blue-500 shadow-lg shadow-blue-500/50 drop-shadow-2xl flex justify-center p-2 w-full rounded-xl mt-1.5 mb-8 mt-3 border-green-500" onClick={calcularPeso}>Calcular</button>
-
-     </div>
+      
+      </div>
      
       
 {error && <p style={{ color: 'red' }}>{error}</p>}
-      <table className="scrool-x-auto  border-separate border border-cyan-500 border-spacing-0.5 pt-2 mt-[80vh]  ">
-        <thead className=" ">
+
+      <table className="scrool-x-auto  border-separate border border-cyan-500 border-spacing-0.5 container mx-auto  absolute mt-5   ">
+        <thead >
           <tr className="bg-[#0081B9]  ">
             <th className="border border-cyan-700 p-0.5 px-4">Largo</th>
             <th className="border border-slate-600 p-3">Ancho</th>
@@ -274,9 +275,9 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
               <td className="border border-slate-600 p-2 px-4">{row.kgMerma}</td>
               <td className="border border-slate-600 p-2 px-4 bg-[green]">{row.consumoOf}</td>
               <td className="danger">
-                <button onClick={() => eliminarFila(row)} className="border-2 border-rose-500 rounded-md py-0.5 px-2 mx-2.5">Eliminar</button>
+                <button onClick={() => eliminarFila(row)} className="border-2 border-rose-500 rounded-md py-0.5 px-2 mx-2.5 text-center">Eliminar</button>
               </td>
-            </tr>
+            </tr> 
           ))}
         </tbody>
         <tfoot className="bg-[#7DCE13]">
@@ -291,8 +292,9 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
           </tr>
         </tfoot>
       </table>
-         
-       </div>
+       
+       
+       
     </div>
   );
 }
