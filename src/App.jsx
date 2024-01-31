@@ -3,8 +3,14 @@ import  { useState, useRef, useEffect } from 'react';
 import {useLocalStorage} from "./UseLocalStorage";
 
 
+
+
 function App() {
   
+  
+    
+    
+
   const largoFocus = useRef(null);
   const [largoDeLaPlancha, setLargoDeLaPlancha ] = useLocalStorage('largoDeLaPlancha', '');
   const [anchoDeLaPlancha, setAnchoDeLaPlancha] = useLocalStorage('anchoDeLaPlancha', '');
@@ -205,7 +211,7 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
 
 <h2 className="text-xl font-bold  bg-[#0085ff] flex justify-center p-2 
   mb-3 mt-4 rounded-xl">Pieza Requerida</h2>
-
+    <form onSubmit={(e) => e.preventDefault()} >
       <div className="flex flex-col-2   pt-1 pb-1 space-x-[85px]">
         <label className="flex flex-col-2  pt-2 pb-2" >Largo:</label>
         <input
@@ -213,6 +219,7 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
           value={largo}
           onChange={(e) => setLargo(e.target.value)}
           ref={largoFocus}
+          name="largo"
           className="w-40 grow h-8 my-1  border border-slate-300 rounded-md py-0.5 pl-3 pr-2 shadow-sm focus:outline-none border-2  focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm text-[#4A4A4A]"
         />
       </div>
@@ -241,7 +248,7 @@ row.sumaConsumoOf += parseFloat(row.consumoOf);
       </div>
       
       <button className="text-3xl animate-duration-75 font-bold  bg-blue-500 shadow-lg shadow-blue-500/50 drop-shadow-2xl flex justify-center p-2 w-full rounded-xl mt-1.5 mb-8 mt-3 border-green-500" onClick={calcularPeso}>Calcular</button>
-      
+     </form>  
       </div>
      
       
